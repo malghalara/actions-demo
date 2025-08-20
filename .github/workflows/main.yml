@@ -1,20 +1,20 @@
 name: Demo CI with GitHub-Hosted Runner
 
-# Trigger workflow when code is pushed
+
 on: [push]
 
 jobs:
   build:
-    # 👇 This tells GitHub to use their own VM (hosted runner)
+ 
     runs-on: ubuntu-latest  
 
     steps:
-      # 1. Checkout repo code into the VM
       - uses: actions/checkout@v4
 
-      # 2. Run Linux commands on that VM
+
       - name: Run basic commands
         run: |
           echo "Hello from GitHub-hosted runner!"
           uname -a
           ls -l
+
